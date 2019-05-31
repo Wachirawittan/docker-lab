@@ -1,0 +1,20 @@
+version: '2'
+services:
+  java_web:
+    image: lab2_java 
+    container_name: lab2_java 
+    restart: always
+    ports:
+      - '80:8080'
+  html_web:
+    image: lab2_web
+    container_name: lab2_web_
+    restart: always
+    ports:
+      - '81:80'
+  python_web:
+    image: lab2_python
+    container_name: lab2_python
+    restart: always
+    ports:
+      - '82:5000'
