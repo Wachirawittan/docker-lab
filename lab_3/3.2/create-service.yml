@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    image: nginx:1.12
+    deploy:
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+    restart: always
+    ports:
+      - '80:80'
+    volumes:
+      - '/etc/hostname:/usr/share/nginx/html/index.html:ro'
